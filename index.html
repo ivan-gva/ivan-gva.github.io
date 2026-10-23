@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="claro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iván Gómez Navarro — Diseñador &amp; Desarrollador front-end</title>
+<meta name="description" content="Portafolio de ejemplo de Iván Gómez Navarro: diseño de interfaces, design systems y desarrollo front-end.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="grano" aria-hidden="true"></div>
+<div class="progreso" aria-hidden="true"><span id="barra-progreso"></span></div>
+
+<!-- ══════════════ BARRA SUPERIOR ══════════════ -->
+<header class="barra" id="barra">
+  <a href="#inicio" class="marca">
+    <span class="marca__punto" aria-hidden="true"></span>
+    <span class="marca__txt">I.G.N</span>
+  </a>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <a href="#perfil">Perfil</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#galeria">Galería</a>
+  </nav>
+
+  <div class="barra__final">
+    <time class="reloj" id="reloj">--:--:--</time>
+    <button class="tema" id="boton-tema" aria-label="Cambiar a tema nocturno">
+      <span class="tema__sol" aria-hidden="true"></span>
+      <span class="tema__luna" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════ PORTADA ══════════════ -->
+<section class="portada" id="inicio">
+  <div class="portada__texto">
+
+    <p class="kicker"><span class="kicker__num">01</span> Portafolio — Valencia, España</p>
+
+    <h1 class="nombre">
+      <span class="linea"><span>Iván Gómez</span></span>
+      <span class="linea"><span class="nombre__apellido">Navarro</span></span>
+    </h1>
+
+    <p class="rol">
+      <span class="rol__fijo">Diseño de interfaces,</span>
+      <span class="scramble" data-palabras="design systems,front-end,prototipos,accesibilidad,motion">&nbsp;</span>
+    </p>
+
+    <p class="portada__intro revelar">
+      Nueve años convirtiendo ideas difusas en productos claros: interfaces rápidas,
+      sistemas de diseño que sobreviven al tiempo y código limpio que cualquier equipo
+      puede mantener.
+    </p>
+
+    <div class="acciones revelar">
+      <a class="boton boton--lleno" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
+      <a class="boton boton--linea" href="#contacto">Hablemos</a>
+    </div>
+
+    <ul class="indices" aria-label="Índice de la página">
+      <li><span>01</span> Perfil</li>
+      <li><span>02</span> Trayectoria</li>
+      <li><span>03</span> Proyectos</li>
+      <li><span>04</span> Habilidades</li>
+      <li><span>05</span> Galería</li>
+      <li><span>06</span> Contacto</li>
+    </ul>
+  </div>
+
+  <figure class="portada__visual revelar">
+    <div class="marco">
+      <img src="https://picsum.photos/seed/ivan-gomez-navarro-retrato/900/1200"
+           alt="Retrato de Iván Gómez Navarro en su estudio" width="900" height="1200">
+    </div>
+
+    <svg class="sello" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="circulo" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
+      <text><textPath href="#circulo">· disponible · proyectos freelance · 2025 ·</textPath></text>
+    </svg>
+
+    <figcaption class="pie-foto">
+      <strong>Estudio del Cabanyal</strong>
+      <span>Marzo de 2025 · analógico, 35 mm</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ══════════════ CINTA ══════════════ -->
+<div class="cinta" aria-hidden="true">
+  <div class="cinta__pista">
+    <span>Diseño de interfaces</span><i>✳</i><span>Design systems</span><i>✳</i>
+    <span>HTML &amp; CSS a mano</span><i>✳</i><span>Accesibilidad AA</span><i>✳</i>
+    <span>Renderizado web</span><i>✳</i><span>Tipografía</span><i>✳</i>
+    <span>Diseño de interfaces</span><i>✳</i><span>Design systems</span><i>✳</i>
+    <span>HTML &amp; CSS a mano</span><i>✳</i><span>Accesibilidad AA</span><i>✳</i>
+    <span>Renderizado web</span><i>✳</i><span>Tipografía</span><i>✳</i>
+  </div>
+</div>
+
+<!-- ══════════════ CIFRAS ══════════════ -->
+<section class="cifras" aria-label="Cifras destacadas">
+  <div class="cifra revelar"><b data-contador="9">0</b><span>años de oficio</span></div>
+  <div class="cifra revelar"><b data-contador="68">0</b><span>proyectos entregados</span></div>
+  <div class="cifra revelar"><b data-contador="24">0</b><span>clientes y equipos</span></div>
+  <div class="cifra revelar"><b data-contador="3">0</b><span>premios de diseño</span></div>
+</section>
+
+<!-- ══════════════ PERFIL (dos columnas pegajosas) ══════════════ -->
+<section class="seccion dos-columnas" id="perfil">
+  <div class="columna-pegajosa">
+    <p class="kicker"><span class="kicker__num">02</span> Quién soy</p>
+    <h2 class="seccion__titulo revelar">Un oficio<br><em>paciente</em></h2>
+    <p class="seccion__meta revelar">Valencia (ES) · UTC+2<br>Icografía, CSS y café de filtro</p>
+  </div>
+
+  <div class="columna-texto">
+    <p class="lead revelar">
+      Me llamo <strong>Iván Gómez Navarro</strong>. Empecé maquetando páginas para el negocio
+      de mi familia y acabé construyendo sistemas de diseño para fintechs, hospitales y
+      redacciones. Sigo haciendo lo mismo, solo que con más herramientas: dar forma clara
+      a problemas que llegan torcidos.
+    </p>
+
+    <p class="revelar">
+      Trabajo a caballo entre el diseño y el código. Diseño en Figma, pero valido casi todo
+      en el navegador, porque una tipografía solo se entiende cuando rebota contra un
+      móvil real. Me interesan las cosas aburridas que funcionan: contraste suficiente,
+      teclado operativo, estados de carga honestos, una jerarquía que se lee sin esfuerzo.
+    </p>
+
+    <blockquote class="cita revelar">
+      «El buen front-end es invisible: la gente no lo nota, simplemente puede con la tarea.»
+    </blockquote>
+
+    <p class="revelar">
+      Fuera del ordenador cromo positivo, colecciono revistas de señalética de los setenta y
+      doy clases de accesibilidad en una escuela de diseño. Vivo con una bicicleta plegable
+      que sube cinco pisos y con la manía de medirlo todo con reglas tipográficas.
+    </p>
+
+    <ul class="datos revelar">
+      <li><span>Enfoque</span><b>Producto, sistemas, rendimiento</b></li>
+      <li><span>Herramientas</span><b>Figma, VS Code, Git, Framer</b></li>
+      <li><span>Idiomas</span><b>Català, Español, English, Français</b></li>
+      <li><span>Metodología</span><b>Diseño continuo, entregas quincenales</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════ TRAYECTORIA ══════════════ -->
+<section class="seccion" id="trayectoria">
+  <header class="seccion__cabecera">
+    <p class="kicker"><span class="kicker__num">03</span> Trayectoria</p>
+    <h2 class="seccion__titulo revelar">Nueve años<br>de <em>taller</em></h2>
+  </header>
+
+  <ol class="linea-tiempo">
+    <li class="hitito revelar">
+      <span class="hitito__anio">2025</span>
+      <div class="hitito__cuerpo">
+        <h3>Director de diseño freelance</h3>
+        <p>Estudio propio. Diseño de sistemas y acompañamiento a equipos de producto
+           en tres fintechs europeas. Equipo de 2 diseñadores y 1 desarrolladora.</p>
+        <ul class="etiquetas"><li>Estrategia</li><li>Design ops</li><li>Mentoría</li></ul>
+      </div>
+    </li>
+    <li class="hitito revelar">
+      <span class="hitito__anio">2022</span>
+      <div class="hitito__cuerpo">
+        <h3>Lead Front-end · Núbol Salud</h3>
+        <p>Reescritura del portal de paciente para 1,2 M de usuarios. Baja del tiempo de
+           carga de 4,1 s a 0,9 s y certificación de accesibilidad AA en 40 pantallas.</p>
+        <ul class="etiquetas"><li>React</li><li>Accesibilidad</li><li>Rendimiento</li></ul>
+      </div>
+    </li>
+    <li class="hitito revelar">
+      <span class="hitito__anio">2019</span>
+      <div class="hitito__cuerpo">
+        <h3>Diseñador de producto · Merca</h3>
+        <p>Marketplace de producto local. Saqué del papel el sistema «Campo», aún en uso:
+           18 componentes, 6 patrones y una escala tipográfica de 8 pasos.</p>
+        <ul class="etiquetas"><li>Figma</li><li>Design system</li><li>Research</li></ul>
+      </div>
+    </li>
+    <li class="hitito revelar">
+      <span class="hitito__anio">2016</span>
+      <div class="hitito__cuerpo">
+        <h3>Maquetador · Estudio Analogía</h3>
+        <p>Primer trabajo. Treinta y pico webs corporativas en HTML y CSS puro. Ahí aprendí
+           que un buen documento vale más que un buen framework.</p>
+        <ul class="etiquetas"><li>HTML</li><li>CSS</li><li>WordPress</li></ul>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ══════════════ PROYECTOS (tarjetas apiladas) ══════════════ -->
+<section class="seccion" id="proyectos">
+  <header class="seccion__cabecera">
+    <p class="kicker"><span class="kicker__num">04</span> Trabajo seleccionado</p>
+    <h2 class="seccion__titulo revelar">Cuatro piezas<br>con <em>nombre</em></h2>
+  </header>
+
+  <div class="pila">
+    <article class="carta" style="--i:0">
+      <div class="carta__visual"><img src="https://picsum.photos/seed/proyecto-sistema-campo/900/700" alt="Pantallas del sistema de diseño Campo" width="900" height="700" loading="lazy"></div>
+      <div class="carta__texto">
+        <p class="carta__num">Proyecto 01 — 2024</p>
+        <h3>Campo Design System</h3>
+        <p>Sistema multi-marca para una cooperativa de banca ética: 64 componentes,
+           tokens sincronizados con Figma y documentación ejecutable. Redujo el tiempo
+           de maquetación de las campañas un 47 %.</p>
+        <dl class="ficha">
+          <div><dt>Rol</dt><dd>Diseño + front-end</dd></div>
+          <div><dt>Duración</dt><dd>7 meses</dd></div>
+          <div><dt>Stack</dt><dd>Figma, Tokens Studio, Web Components</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="carta" style="--i:1">
+      <div class="carta__visual"><img src="https://picsum.photos/seed/proyecto-observatorio-clima/900/700" alt="Panel del observatorio climático" width="900" height="700" loading="lazy"></div>
+      <div class="carta__texto">
+        <p class="carta__num">Proyecto 02 — 2023</p>
+        <h3>Observatorio del Clima</h3>
+        <p>Visualización pública de 40 años de series climáticas del Mediterráneo.
+           Cartografía en canvas, gráficos accesibles por teclado y exportación
+           impresa para el aula.</p>
+        <dl class="ficha">
+          <div><dt>Rol</dt><dd>Diseño de datos</dd></div>
+          <div><dt>Duración</dt><dd>4 meses</dd></div>
+          <div><dt>Stack</dt><dd>Svelte, D3, Canvas</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="carta" style="--i:2">
+      <div class="carta__visual"><img src="https://picsum.photos/seed/proyecto-rotllana-editorial/900/700" alt="Portada de la revista Rotllana" width="900" height="700" loading="lazy"></div>
+      <div class="carta__texto">
+        <p class="carta__num">Proyecto 03 — 2022</p>
+        <h3>Rotllana, revista digital</h3>
+        <p>Rediseño de una publicación cultural de 120.000 lectores: retícula editorial,
+           modo lectura larga, suscripciones y un CMS que la redacción aprendió a usar
+           en una tarde.</p>
+        <dl class="ficha">
+          <div><dt>Rol</dt><dd>Dirección de diseño</dd></div>
+          <div><dt>Duración</dt><dd>5 meses</dd></div>
+          <div><dt>Stack</dt><dd>Astro, Sanity, CSS Grid</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="carta" style="--i:3">
+      <div class="carta__visual"><img src="https://picsum.photos/seed/proyecto-app-logistica/900/700" alt="Interfaz de la app de logística" width="900" height="700" loading="lazy"></div>
+      <div class="carta__texto">
+        <p class="carta__num">Proyecto 04 — 2021</p>
+        <h3>Ruta, app de logística</h3>
+        <p>Herramienta de reparto para mozos con guantes y a -4 °C: objetivos táctiles
+           grandes, modo nocturno y funcionamiento sin conexión. Cero incidencias
+           de introducción en 9 meses.</p>
+        <dl class="ficha">
+          <div><dt>Rol</dt><dd>UX + prototipado</dd></div>
+          <div><dt>Duración</dt><dd>6 meses</dd></div>
+          <div><dt>Stack</dt><dd>PWA, IndexedDB, Testing</dd></div>
+        </dl>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════ HABILIDADES ══════════════ -->
+<section class="seccion habilidades" id="habilidades">
+  <header class="seccion__cabecera">
+    <p class="kicker"><span class="kicker__num">05</span> Habilidades</p>
+    <h2 class="seccion__titulo revelar">Lo que hago<br>con las <em>manos</em></h2>
+  </header>
+
+  <div class="habilidades__rejilla">
+    <div class="barras">
+      <div class="barra-item revelar"><span class="barra-item__nombre">Diseño de interfaces</span><i style="--nivel:96%"></i><b>96</b></div>
+      <div class="barra-item revelar"><span class="barra-item__nombre">Design systems</span><i style="--nivel:92%"></i><b>92</b></div>
+      <div class="barra-item revelar"><span class="barra-item__nombre">HTML &amp; CSS</span><i style="--nivel:98%"></i><b>98</b></div>
+      <div class="barra-item revelar"><span class="barra-item__nombre">JavaScript / TypeScript</span><i style="--nivel:84%"></i><b>84</b></div>
+      <div class="barra-item revelar"><span class="barra-item__nombre">Accesibilidad</span><i style="--nivel:89%"></i><b>89</b></div>
+      <div class="barra-item revelar"><span class="barra-item__nombre">Rendimiento web</span><i style="--nivel:80%"></i><b>80</b></div>
+    </div>
+
+    <div class="caja-oscura revelar">
+      <h3>Otros ingredientes</h3>
+      <ul class="nube">
+        <li>Figma</li><li>Tokens Studio</li><li>Svelte</li><li>React</li><li>Astro</li>
+        <li>Vite</li><li>Sass</li><li>Storybook</li><li>Playwright</li><li>Git</li>
+        <li>Storybook</li><li>Motion One</li><li>SVG</li><li>WCAG 2.2</li><li>Fotografía</li>
+        <li>Tipografía</li><li>Letterpress</li><li>Redacción UX</li>
+      </ul>
+      <p class="nota">Especialidad: traducir un PDF de 60 páginas en un producto que se
+         entiende sin manual.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GALERÍA (postales dispersas) ══════════════ -->
+<section class="seccion" id="galeria">
+  <header class="seccion__cabecera">
+    <p class="kicker"><span class="kicker__num">06</span> Cuaderno</p>
+    <h2 class="seccion__titulo revelar">Postales<br>del <em>taller</em></h2>
+  </header>
+
+  <div class="postales">
+    <figure class="postal" style="--r:-4deg">
+      <img src="https://picsum.photos/seed/postal-bocetos-papel/700/520" alt="Bocetos en papel sobre la mesa" loading="lazy" width="700" height="520">
+      <figcaption>Bocetos previos · papel milimetrado</figcaption>
+    </figure>
+    <figure class="postal" style="--r:3deg">
+      <img src="https://picsum.photos/seed/postal-reticula-editorial/700/520" alt="Retícula editorial impresa" loading="lazy" width="700" height="520">
+      <figcaption>Retícula de 12 columnas</figcaption>
+    </figure>
+    <figure class="postal" style="--r:-2deg">
+      <img src="https://picsum.photos/seed/postal-senaletica-setenta/700/520" alt="Señalética antigua" loading="lazy" width="700" height="520">
+      <figcaption>Señalética heredada, 1974</figcaption>
+    </figure>
+    <figure class="postal" style="--r:5deg">
+      <img src="https://picsum.photos/seed/postal-pantalla-codigo/700/520" alt="Pantalla con código CSS" loading="lazy" width="700" height="520">
+      <figcaption>CSS a mano, sin framework</figcaption>
+    </figure>
+    <figure class="postal" style="--r:-6deg">
+      <img src="https://picsum.photos/seed/postal-cafe-analogico/700/520" alt="Café y carrete analógico" loading="lazy" width="700" height="520">
+      <figcaption>Pausa, carrete 35 mm</figcaption>
+    </figure>
+    <figure class="postal" style="--r:2deg">
+      <img src="https://picsum.photos/seed/postal-clase-accesibilidad/700/520" alt="Pizarra de una clase de accesibilidad" loading="lazy" width="700" height="520">
+      <figcaption>Clase de accesibilidad AA</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════ TESTIMONIOS ══════════════ -->
+<section class="seccion voces">
+  <header class="seccion__cabecera">
+    <p class="kicker"><span class="kicker__num">07</span> Referencias</p>
+    <h2 class="seccion__titulo revelar">Lo que dicen</h2>
+  </header>
+
+  <div class="voces__rejilla">
+    <blockquote class="voz voz--grande revelar">
+      <p>Iván entra en el problema y sale con un sistema. Entregó la documentación el mismo
+         día que el primer prototipo y seis meses después seguimos usándola sin tocarla.</p>
+      <footer><b>Marta Ribes</b><span>Head of Product · Núbol Salud</span></footer>
+    </blockquote>
+
+    <blockquote class="voz revelar">
+      <p>Poca gente discute tan bien una decisión de diseño con datos de uso en la mano.</p>
+      <footer><b>Joel Sanmartín</b><span>CTO · Merca</span></footer>
+    </blockquote>
+
+    <blockquote class="voz revelar">
+      <p>Nos enseñó a medir accesibilidad sin miedo. La redacción lo agradece cada mañana.</p>
+      <footer><b>Àuria Peláez</b><span>Editora · Rotllana</span></footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACTO ══════════════ -->
+<section class="seccion contacto" id="contacto">
+  <div class="contacto__cab">
+    <p class="kicker"><span class="kicker__num">08</span> Contacto</p>
+    <h2 class="seccion__titulo--enorme revelar">¿Empezamos<br>algo <em>bueno</em>?</h2>
+    <p class="revelar">Agenda abierta desde mayo. Respondo en menos de 24 h laborables.</p>
+
+    <ul class="contacto__datos">
+      <li>
+        <span>Correo</span>
+        <a href="mailto:hola@ivangomez.dev" id="correo">hola@ivangomez.dev</a>
+        <button class="copiar" id="boton-copiar" type="button">Copiar</button>
+      </li>
+      <li><span>Teléfono</span><a href="tel:+34960000000">+34 960 00 00 00</a></li>
+      <li><span>Ubicación</span><b>Valencia, España</b></li>
+    </ul>
+
+    <div class="redes">
+      <a href="#" >LinkedIn</a><a href="#">GitHub</a><a href="#">Are.na</a><a href="#">Instagram</a>
+    </div>
+  </div>
+
+  <form class="formulario" id="formulario" novalidate>
+    <h3>Escríbeme un mensaje</h3>
+    <div class="campo">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" type="text" placeholder="Cómo te llamas" required>
+    </div>
+    <div class="campo">
+      <label for="email">Correo</label>
+      <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+    </div>
+    <div class="campo">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame el proyecto, plazos y presupuesto orientativo." required></textarea>
+    </div>
+    <button class="boton boton--lleno boton--ancho" type="submit">Enviar mensaje <span aria-hidden="true">→</span></button>
+    <p class="aviso" id="aviso-form" role="status"></p>
+  </form>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="pie__fila">
+    <p><strong>Iván Gómez Navarro</strong> — Web de ejemplo con fines docentes.</p>
+    <p>Hecho a mano con HTML y CSS · <span id="anio">2025</span></p>
+    <a href="#inicio" class="pie__arriba">Volver arriba ↑</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const reducido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Reloj en vivo ---------- */
+  const reloj = document.getElementById('reloj');
+  const marcar = () => {
+    reloj.textContent = new Intl.DateTimeFormat('es-ES',
+      { hour:'2-digit', minute:'2-digit', second:'2-digit', timeZone:'Europe/Madrid' }).format(new Date());
+  };
+  marcar(); setInterval(marcar, 1000);
+
+  /* ---------- Año del pie ---------- */
+  document.getElementById('anio').textContent = new Date().getFullYear();
+
+  /* ---------- Barra de progreso + cabecera compacta ---------- */
+  const barra = document.getElementById('barra-progreso');
+  const cabecera = document.getElementById('barra');
+  const alMover = () => {
+    const top = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    barra.style.transform = `scaleX(${total > 0 ? top / total : 0})`;
+    cabecera.classList.toggle('barra--compacta', top > 40);
+  };
+  alMover();
+  window.addEventListener('scroll', alMover, { passive:true });
+
+  /* ---------- Revelados al entrar en pantalla ---------- */
+  const revelador = new IntersectionObserver((entradas, obs) => {
+    entradas.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.revelar, .hitito, .postal, .carta, .barra-item').forEach(el => revelador.observe(el));
+
+  /* ---------- Contadores ---------- */
+  const contadores = document.querySelectorAll('[data-contador]');
+  const contar = new IntersectionObserver((entradas, obs) => {
+    entradas.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, fin = +el.dataset.contador;
+      if (reducido) { el.textContent = fin; obs.unobserve(el); return; }
+      const t0 = performance.now(), dur = 1400;
+      const paso = t => {
+        const p = Math.min((t - t0) / dur, 1);
+        el.textContent = Math.round(fin * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(paso);
+      };
+      requestAnimationFrame(paso);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+  contadores.forEach(c => contar.observe(c));
+
+  /* ---------- Título que se descifra ---------- */
+  const glifos = '▚▞░▒▓/\\<>*#—+=';
+  document.querySelectorAll('.scramble').forEach(el => {
+    const palabras = el.dataset.palabras.split(',');
+    let i = 0;
+    const descifrar = texto => {
+      if (reducido) { el.textContent = texto; return; }
+      let n = 0;
+      clearInterval(el._t);
+      el._t = setInterval(() => {
+        el.textContent = texto.split('').map((c, idx) =>
+          idx < n ? c : (c === ' ' ? ' ' : glifos[(Math.random() * glifos.length) | 0])
+        ).join('');
+        n += 1/2;
+        if (n >= texto.length) { clearInterval(el._t); el.textContent = texto; }
+      }, 34);
+    };
+    descifrar(palabras[0]);
+    setInterval(() => { i = (i + 1) % palabras.length; descifrar(palabras[i]); }, 3200);
+  });
+
+  /* ---------- Tema claro / nocturno ---------- */
+  const botonTema = document.getElementById('boton-tema');
+  botonTema.addEventListener('click', () => {
+    const raiz = document.documentElement;
+    const nuevo = raiz.dataset.tema === 'claro' ? 'nocturno' : 'claro';
+    raiz.dataset.tema = nuevo;
+    botonTema.setAttribute('aria-label', `Cambiar a tema ${nuevo === 'claro' ? 'nocturno' : 'claro'}`);
+  });
+
+  /* ---------- Copiar correo ---------- */
+  const copiar = document.getElementById('boton-copiar');
+  copiar.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText('hola@ivangomez.dev'); } catch(e) {}
+    copiar.textContent = '¡Copiado!';
+    copiar.classList.add('hecho');
+    setTimeout(() => { copiar.textContent = 'Copiar'; copiar.classList.remove('hecho'); }, 1800);
+  });
+
+  /* ---------- Formulario (simulado) ---------- */
+  const form = document.getElementById('formulario');
+  const aviso = document.getElementById('aviso-form');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const datos = new FormData(form);
+    const ok = datos.get('nombre').trim() && /\S+@\S+\.\S+/.test(datos.get('email')) && datos.get('mensaje').trim().length > 10;
+    aviso.textContent = ok
+      ? 'Gracias, ' + datos.get('nombre').trim().split(' ')[0] + '. Mensaje registrado (simulado).'
+      : 'Revisa los campos: nombre, un correo válido y un mensaje de más de 10 caracteres.';
+    aviso.classList.toggle('error', !ok);
+    if (ok) form.reset();
+  });
+})();
+</script>
+</body>
+</html>
